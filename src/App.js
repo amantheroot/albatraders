@@ -1,7 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux";
 
-import {incrementState} from "./actions/stateActions";
+import {BrowserRouter, Switch, Route} from  "react-router-dom";
+
+import Layout from  "./components/layout";
+import Home from "./components/pages/home";
+import Products from "./components/pages/products";
+import Contact from "./components/pages/contact";
+import NotFound from "./components/pages/notfound";
 
 const mapStateToProps = store => {
   return {
@@ -10,15 +16,18 @@ const mapStateToProps = store => {
 };
 
 class toConnectApp extends Component {
-  headClick = () => {
-    this.props.dispatch(incrementState());
-  }
-
   render() {
     return (
-      <div className="App">
-        <h1 onClick={this.headClick}>Hello World! The State is {this.props.store}</h1>
-      </div>
+      <BrowserRouter>
+        <Layout>
+          <Switch>
+            <Route path="/" component={Home} exact />
+            <Route path="/products" component={Products} />
+            <Route path="/contact" component={Contact} />
+            <Route component={NotFound} />
+          </Switch>
+        </Layout>
+      </BrowserRouter>
     );
   }
 }

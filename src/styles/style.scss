@@ -3,3 +3,11 @@
 @import "partials/mixins";
 @import "partials/base";
 @import "partials/layout";
+
+@import "layout/navigation";
+@import "layout/footer";
+
+@import "pages/home";
+@import "pages/products";
+@import "pages/contact";
+@import "pages/notfound";

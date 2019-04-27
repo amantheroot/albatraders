@@ -1,7 +1,9 @@
-import { combineReducers } from "redux";
+import initialState from "../store/initialState";
 
-import stateReducer from "./stateReducer";
-
-export default combineReducers({
-  stateReducer
-});
+export default function reducer(state=initialState,action) {
+  switch (action.type) {
+    default: {
+      return state;
+    }
+  }
+}
