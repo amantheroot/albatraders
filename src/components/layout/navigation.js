@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export class Navigation extends Component {
   render() {
@@ -10,4 +10,4 @@ export class Navigation extends Component {
   }
 }
 
-export default Navigation
+export default Navigation;

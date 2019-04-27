@@ -1,13 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { connect } from "react-redux";
 
-export class Products extends Component {
+const mapStateToProps = store => {
+  return {
+    products: store.products
+  };
+};
+
+export class toConnectProducts extends Component {
   render() {
     return (
       <div>
-        <h1>Products</h1>
+        <h1>Products {JSON.stringify(this.props.products)}</h1>
       </div>
     )
   }
 }
 
-export default Products
+const Products = connect(mapStateToProps)(toConnectProducts);
+
+export default Products;
