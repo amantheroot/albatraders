@@ -1,6 +1,22 @@
 {
-  "name": "my-app",
+  "name": "albatraders",
   "version": "0.1.0",
+  "description": "Industrial Traders",
+  "keywords": [
+    "traders",
+    "industrial",
+    "alba",
+    "products"
+  ],
+  "author": "Aman Kumar",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amantheroot/albatraders.git"
+  },
+  "bugs": {
+    "url": "https://github.com/amantheroot/albatraders/issues"
+  },
   "private": true,
   "dependencies": {
     "node-sass": "^4.12.0",
