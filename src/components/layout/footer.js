@@ -4,7 +4,7 @@ export class Footer extends Component {
   render() {
     return (
       <footer>
-        <h1>Foot</h1>
+        <div>Copyright &copy; {new Date().getFullYear()} Cerebros</div>
       </footer>
     )
   }
