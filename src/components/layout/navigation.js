@@ -5,7 +5,7 @@ import Logo from "../../assets/media/logo.svg";
 export class Navigation extends Component {
   linkClicked = (e, page) => {
     e.preventDefault();
-    console.log(document.getElementById(page));
+    window.scroll(0,document.getElementById(page).offsetTop);
   }
   render() {
     return (
