@@ -1,18 +1,21 @@
 import React, { Component } from 'react';
 
-import {Link} from "react-router-dom";
-
 import Logo from "../../assets/media/logo.svg";
 
 export class Navigation extends Component {
+  linkClicked = (e, page) => {
+    e.preventDefault();
+    console.log(document.getElementById(page));
+  }
   render() {
     return (
       <nav>
-        <Link to="/"><img src={Logo} alt="logo"></img></Link>
+        <a href="/"><img src={Logo} alt="logo"></img></a>
         <ul>
-          <li><Link to ="/">Home</Link></li>
-          <li><Link to ="/products">Products</Link></li>
-          <li><Link to ="/contact">Contact</Link></li>
+          <li><a href="#home" onClick={(e) => this.linkClicked(e, 'home')}>Home</a></li>
+          <li><a href="#about" onClick={(e) => this.linkClicked(e, 'about')}>About</a></li>
+          <li><a href="#products" onClick={(e) => this.linkClicked(e, 'products')}>Products</a></li>
+          <li><a href="#contact" onClick={(e) => this.linkClicked(e, 'contact')}>Contact</a></li>
         </ul>
       </nav>
     )

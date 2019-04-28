@@ -10,7 +10,7 @@ const mapStateToProps = store => {
 export class toConnectProducts extends Component {
   render() {
     return (
-      <div>
+      <div id="products">
         <h1>Products {JSON.stringify(this.props.products)}</h1>
       </div>
     )
